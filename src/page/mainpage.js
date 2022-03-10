@@ -61,7 +61,7 @@ export default function Mainpage() {
         for(let i=0;i<productInCart.length;i++){
             sum = sum+parseInt(productInCart[i].piece)*productInCart[i].count
         }
-        if(countInCart>3 && countInCart<5){
+        if(countInCart>3 && countInCart<=5){
             discount = 5 / 100;
             totalValue = sum - (sum * discount);
             console.log('discount',totalValue.toFixed(2));
@@ -237,7 +237,7 @@ export default function Mainpage() {
                         )
                     })}
                     <Row justify="end">
-                        {countInCart > 3 && countInCart < 5 &&<Col style={{marginRight  :'10px'}}>ส่วนลด 5% เมื่อซื้อหนังมากกว่า 3 รายการ</Col>}
+                        {countInCart > 3 && countInCart <= 5 &&<Col style={{marginRight  :'10px'}}>ส่วนลด 5% เมื่อซื้อหนังมากกว่า 3 รายการ</Col>}
                         {countInCart > 5 && <Col style={{marginRight  :'10px'}}>ส่วนลด 10% เมื่อซื้อหนังมากกว่า 5 รายการ</Col>}
                         <Col>รวมเป็นเงิน  {allpiece}  บาท</Col>
                     </Row>
